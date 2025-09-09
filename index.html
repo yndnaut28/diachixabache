@@ -5,32 +5,50 @@
   <title>Bản đồ số xã Ba Chẽ</title>
   <link rel="icon" type="image.png" href="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-Doan-Thanh-NIen-Cong-San-Ho-Chi-Minh-1.png">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <div class="logo-h1">
             <img src="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-Doan-Thanh-NIen-Cong-San-Ho-Chi-Minh-1.png" alt="logo" width="40px">
-            <h1 style="margin-left: 10px;">🗺️ Bản đồ số – Xã Ba Chẽ</h1>
+            <h1 style="margin-left: 10px;">🗺️ BẢN ĐỒ SỐ – XÃ BA CHẼ</h1>
         </div>
-        <div class="slogan">
-            <strong>TUỔI TRẺ XÃ BA CHẼ BẢN LĨNH SỐ, TRÁCH NHIỆM SỐ, HÀNH ĐỘNG VÌ CỘNG ĐỒNG SỐ</strong>
+        <div class="slogan" style="font-size: 20px;">
+            <strong> - TUỔI TRẺ XÃ BA CHẼ BẢN LĨNH SỐ, TRÁCH NHIỆM SỐ, HÀNH ĐỘNG VÌ CỘNG ĐỒNG SỐ - </strong>
         </div>
-</header>
+    </header>
+    <div class="slideshow-wrapper">
+        <div class="slideshow">
+            <div class="slides" id="slides">
+                <img src="/imgbackground/1.jpg" alt="Ảnh 1">
+                <img src="/imgbackground/2.jpg" alt="Ảnh 2">
+                <img src="/imgbackground/3.jpg" alt="Ảnh 3">
+                <img src="/imgbackground/4.jpg" alt="Ảnh 4">
+                <img src="/imgbackground/5.jpg" alt="Ảnh 5">
+                <img src="/imgbackground/6.jpg" alt="Ảnh 6">
+                <img src="/imgbackground/7.jpg" alt="Ảnh 7">
+            </div>
+            <div class="dots" id="dots"></div>
+        </div>
 
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Tìm theo tên/địa chỉ...">
-        <select id="filterSelect">
-            <option value="all">Tất cả</option>
-            <option value="hanhchinh">Hành chính</option>
-            <option value="yte">Y tế</option>
-            <option value="truonghoc">Trường học</option>
-            <option value="mamnon">Trường mầm non</option>
-            <option value="congan">Công an</option>
-            <option value="dulich">Du lịch</option>
-            <option value="nganhang">Ngân hàng</option>
-            <option value="thethao">Thể thao</option>
-            <option value="nhamay">Nhà máy</option>
-        </select>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm theo tên/địa chỉ...">
+            <select id="filterSelect">
+                <option value="all">Tất cả</option>
+                <option value="hanhchinh">Hành chính</option>
+                <option value="yte">Y tế</option>
+                <option value="truonghoc">Trường học</option>
+                <option value="mamnon">Trường mầm non</option>
+                <option value="congan">Công an</option>
+                <option value="dulich">Du lịch</option>
+                <option value="nganhang">Ngân hàng</option>
+                <option value="thethao">Thể thao</option>
+                <option value="nhamay">Nhà máy</option>
+            </select>
+        </div>
     </div>
     <div id="noResult" style="display:none; text-align:center; margin:20px; font-weight:bold; color:#fff;">
         ❌ Không tìm thấy kết quả
