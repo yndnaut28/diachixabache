@@ -89,3 +89,49 @@ function filterCards() {
 // Event listeners
 document.getElementById("filterSelect").addEventListener("change", filterCards);
 document.getElementById("searchInput").addEventListener("keyup", filterCards);
+
+
+
+const slidesContainer = document.getElementById("slides");
+if (slidesContainer) {
+  const images = slidesContainer.querySelectorAll("img");
+  const dotsContainer = document.getElementById("dots");
+  let index = 0;
+  let timer;
+
+  // tạo dots
+  images.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.addEventListener("click", () => {
+      showSlide(i);
+      resetTimer();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  function updateDots() {
+    dotsContainer.querySelectorAll("span").forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  function showSlide(i) {
+    images.forEach(img => img.classList.remove("active"));
+    index = (i + images.length) % images.length;
+    images[index].classList.add("active");
+    updateDots();
+  }
+
+  function nextSlide() {
+    showSlide(index + 1);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 4000);
+  }
+
+  // khởi tạo
+  showSlide(0);
+  resetTimer();
+}
