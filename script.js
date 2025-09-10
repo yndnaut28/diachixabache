@@ -93,71 +93,69 @@ document.getElementById("searchInput").addEventListener("keyup", filterCards);
 
 
 
-const slidesContainer = document.getElementById("slides");
-if (slidesContainer) {
-  const images = slidesContainer.querySelectorAll("img");
-  const dotsContainer = document.getElementById("dots");
-  let index = 0;
-  let timer;
+document.addEventListener("DOMContentLoaded", () => {
+  const slidesContainer = document.getElementById("slides");
+  if (slidesContainer) {
+    const images = slidesContainer.querySelectorAll("img");
+    const dotsContainer = document.getElementById("dots");
+    let index = 0;
+    let timer;
 
-  // tạo dots
-  images.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.addEventListener("click", () => {
-      showSlide(i);
-      resetTimer();
+    // Tạo dots
+    images.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.addEventListener("click", () => {
+        showSlide(i);
+        resetTimer();
+      });
+      dotsContainer.appendChild(dot);
     });
-    dotsContainer.appendChild(dot);
-  });
 
-  function updateDots() {
-    dotsContainer.querySelectorAll("span").forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
+    function updateDots() {
+      dotsContainer.querySelectorAll("span").forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function showSlide(i) {
+      images.forEach(img => img.classList.remove("active"));
+      index = (i + images.length) % images.length;
+      images[index].classList.add("active");
+      updateDots();
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(nextSlide, 4000);
+    }
+
+    // Khởi tạo
+    showSlide(0);
+    resetTimer();
   }
-
-  function showSlide(i) {
-    images.forEach(img => img.classList.remove("active"));
-    index = (i + images.length) % images.length;
-    images[index].classList.add("active");
-    updateDots();
-  }
-
-  function nextSlide() {
-    showSlide(index + 1);
-  }
-
-  function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(nextSlide, 4000);
-  }
-
-  // khởi tạo
-  showSlide(0);
-  resetTimer();
-}
-
-// 🌗 Dark/Light Mode Toggle
-const themeToggle = document.getElementById("themeToggle");
-
-// Kiểm tra hệ thống & localStorage
-function initTheme() {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.body.classList.toggle("dark", savedTheme === "dark");
-    themeToggle.textContent = savedTheme === "dark" ? "🌙" : "☀️";
-  } else {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.body.classList.toggle("dark", prefersDark);
-    themeToggle.textContent = prefersDark ? "🌙" : "☀️";
-  }
-}
-
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const isDark = document.body.classList.contains("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-  themeToggle.textContent = isDark ? "🌙" : "☀️";
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    function applyTheme(isDark) {
+      document.body.classList.toggle("dark", isDark);
+      themeToggle.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = savedTheme ? savedTheme === "dark" : prefersDark;
+    applyTheme(isDark);
+
+    themeToggle.addEventListener("click", () => {
+      applyTheme(!document.body.classList.contains("dark"));
+    });
+  }
+});
 initTheme();
