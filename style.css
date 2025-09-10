@@ -343,7 +343,20 @@ footer .lienlac a:hover {
 .scroll-top {
   bottom: 70px; /* thay vì 20px */
 }
+.slides img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+}
 
+.slides img.active {
+  opacity: 1;
+  z-ind
 /* ==== RESPONSIVE TOÀN BỘ WEBSITE ==== */
 
 /* 📱 Mobile (màn hình nhỏ hơn 600px) */
@@ -605,4 +618,10 @@ footer .lienlac a:hover {
 
 @media (min-width: 601px) and (max-width: 900px) {
   .slideshow { height: 300px; }
+}
+@media (max-width: 600px) {
+  .slideshow {
+    width: 100%;
+    height: 180px; /* thấp hơn để fit màn hình nhỏ */
+  }
 }
