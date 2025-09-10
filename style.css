@@ -9,6 +9,11 @@ body {
   background: rgb(255, 252, 252);
   background-size: 600% 600%;
 }
+body.dark .theme-btn {
+  background: #333;
+  border: 2px solid #555;
+  color: #fff;
+}
 /* HEADER =============================================================================== */
 header {
   padding: 20px;
