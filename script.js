@@ -83,6 +83,7 @@ function filterCards() {
       card.classList.add("highlight");
       setTimeout(() => card.classList.remove("highlight"), 1200);
     });
+    
   }
 }
 
@@ -135,3 +136,28 @@ if (slidesContainer) {
   showSlide(0);
   resetTimer();
 }
+
+// 🌗 Dark/Light Mode Toggle
+const themeToggle = document.getElementById("themeToggle");
+
+// Kiểm tra hệ thống & localStorage
+function initTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.classList.toggle("dark", savedTheme === "dark");
+    themeToggle.textContent = savedTheme === "dark" ? "🌙" : "☀️";
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.body.classList.toggle("dark", prefersDark);
+    themeToggle.textContent = prefersDark ? "🌙" : "☀️";
+  }
+}
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  themeToggle.textContent = isDark ? "🌙" : "☀️";
+});
+
+initTheme();
