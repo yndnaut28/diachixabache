@@ -356,7 +356,8 @@ footer .lienlac a:hover {
 
 .slides img.active {
   opacity: 1;
-  z-ind
+  z-index: 1; /* Đảm bảo ảnh hiện ở trên cùng */
+}
 /* ==== RESPONSIVE TOÀN BỘ WEBSITE ==== */
 
 /* 📱 Mobile (màn hình nhỏ hơn 600px) */
