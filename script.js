@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (themeToggle) {
     function applyTheme(isDark) {
       document.body.classList.toggle("dark", isDark);
-      themeToggle.textContent = isDark ? "☀️" : "🌙";
+      themeToggle.textContent = isDark ? "🌙" : "☀️";
       localStorage.setItem("theme", isDark ? "dark" : "light");
     }
 
