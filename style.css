@@ -1,124 +1,69 @@
-/* BODY =============================================================================== */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: white;
-  position: relative;
-  z-index: 0;
-  background: rgb(255, 252, 252);
-  background-size: 600% 600%;
-}
-/* HEADER =============================================================================== */
-header {
-  padding: 20px;
-  background: #00804f;
-  display: flex;
-  flex-direction: column; /* chuyển sang dọc */
-  align-items: center;    /* căn giữa ngang */
-  text-align: center;     /* căn giữa chữ */
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.114);
-}
-header .logo-h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* logo + h1 ở giữa */
-}
-header .slogan {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 28px;       /* bạn có thể tăng/giảm tuỳ ý */
-  font-weight: 500;      /* in đậm để nổi bật */
-  color: white;
-  text-align: center;
-  margin-top: 10px;
-  letter-spacing: 1px;   /* giãn nhẹ chữ cho bay bổng */
-}
-header h1 {
-  font-size: 50px;
-  margin: 0;
-  color: white;
-  font-weight: 700;
-}
-/* SLIDE SHOW ẢNH =============================================================================== */
-.slideshow {
-  position: relative;
-  width: 90%;
-  max-width: 1000px;
-  height: 450px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-  background: black;
-}
-.slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.slides img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.slides img.active {opacity: 1;}
-/* Dots */
-.dots {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
-}
-.dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 6px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.dots span.active { background: white;}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-/* 🌗 Dark/Light Toggle =============================================================================== */
-.theme-btn {
-  background: #fff;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+html, body {
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;   
 }
-.theme-btn:hover {background: #f0f0f0;}
-
-/* 🌙 Dark mode */
-body.dark {background: #121212; color: #e0e0e0;}
-body.dark header {background: #004b32; color: #fff;}
-body.dark .slogan {color: #f5f5f5;}
-body.dark .card {background: rgba(40, 40, 40, 0.9); color: #e0e0e0; box-shadow: 0 4px 10px rgb(255, 255, 255)}
-body.dark .card-text h3,
-body.dark .card-text p {color: #e0e0e0;}
-body.dark .card-footer a {background: #00b46f7d;}
-body.dark .card-footer a:hover {background: #0170457d;}
-body.dark footer {background: #1c1c1c;}
-body.dark #noResult {background: rgba(200, 50, 50, 0.9);}
-/* 🎨 Dark mode cho slideshow-wrapper */
-body.dark .slideshow-wrapper {background: linear-gradient(to bottom, #43b3a272, #121212);}
-.slideshow-wrapper {
-  background: linear-gradient(to bottom, #43b3a272, white);
-  padding: 30px 0;
+/* Phần header ============================================*/
+header{
+    display: flex;
+    background-color: #1931A7   ;
+    margin: 0px;
+    padding: 5px;
+    align-items: center;
 }
+#anhlogodoan{
+    display: flex;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+}
+/* Logo (cả chữ) */
+#logo{
+    padding-left: 10px;
+    width: 90px;
+    padding-top: 5px;
+    margin-right: 50px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+/* Chữ dưới logo */
+
+#namelogo{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+#ntlg{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; 
+}
+#nametag h1{
+    font-family: sans-serif;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+#nametag p{
+    font-family: sans-serif;
+    color: white;
+    margin-bottom: 0px;
+}
+#imglogo img{
+    width: 200px;
+    margin: 0px;
+}
+
 /* SEARCH BAR ===============================================================================*/
 .search-bar {
   display: flex;
@@ -135,7 +80,7 @@ body.dark .slideshow-wrapper {background: linear-gradient(to bottom, #43b3a272, 
 .search-bar input,
 .search-bar select {
   padding: 10px 14px;
-   border: 2px solid gray; 
+   border: 2px solid #1931A7; 
   border-radius: 8px;
   font-size: 1em;
   outline: none;
@@ -144,10 +89,78 @@ body.dark .slideshow-wrapper {background: linear-gradient(to bottom, #43b3a272, 
   flex: 1;
   min-width: 220px;           
 }
-.search-bar select {
+input:focus {
+  box-shadow: 0 0 10px #1931A7;
+}
+
+.custom-select {
+  position: relative;
+  width: 220px;
+  font-family: "Segoe UI", sans-serif;
+  user-select: none;
+}
+
+.custom-select .selected {
+  padding: 10px 14px;
+  border: 2px solid #1931A7;
+  border-radius: 8px;
   background: #fff;
   cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.custom-select .selected::after {
+  content: "▼";
+  font-size: 12px;
+  color: #1931A7;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.custom-select.active .selected::after {
+  transform: rotate(180deg);
+}
+
+.custom-select .options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 4px;
+  z-index: 10;
+  box-shadow: 0 4px 10px #1931A7;
+  animation: slideDown 0.15s ease;
+  overflow: hidden;
+}
+
+.custom-select.active .options {
+  display: block;
+}
+
+.custom-select .options div {
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.custom-select .options div:hover {
+  background: #1931A7;
+  color: #fff;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CARD ===============================================================================*/
 .card-container {
   display: flex;
   gap: 20px;
@@ -155,10 +168,8 @@ body.dark .slideshow-wrapper {background: linear-gradient(to bottom, #43b3a272, 
   flex-wrap: wrap;
   justify-content: center;
 }
-
-/* ---- CARD ---- */
 .card {
-  background:#E7FBF5;   
+  background:#ffffff;   
   border-radius: 12px;
   overflow: hidden;
   width: 300px; 
@@ -167,53 +178,110 @@ body.dark .slideshow-wrapper {background: linear-gradient(to bottom, #43b3a272, 
   flex-direction: column;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px); 
-  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border: 3px solid #1931A7; 
 }
-
-/* Khối ảnh */
+.card::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px; 
+    height: 600px;
+    margin-left: -300px;
+    margin-top: -300px;
+    border-radius: 50%;
+    z-index: -2; 
+    background: #e0e0e0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.card:hover::before {
+    opacity: 1;
+    background: conic-gradient(transparent, transparent, transparent, #00b7ff, #ff30ff);
+    animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+    form{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 5px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.card-img{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    z-index: 2;
+}
 .card-img img {
   width: 100%;
-  height: 180px;
+  height: auto; 
+  aspect-ratio: 16/9;
   object-fit: cover;
   display: block;
+  z-index: 2;
+  border-radius: 10px 10px 0 0;
 }
 
-/* Khối text */
 .card-text {
-  padding: 15px;
-  padding-bottom: 0;
-  flex: 1;
+    padding: 20px;
+    padding-bottom: 0;
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 2;
+}.card-text h3 {
+    font-family: "Montserrat";
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #1931A7;
 }
-
-.card-text h3 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  color: black;
-}
-
 .card-text p {
-  font-size: 14px;
-  color: #000000;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: #1931A7;
 }
 
-/* Khối nút */
 .card-footer {
   padding: 15px;
   padding-top: 0;
+  z-index: 2;
 }
 
-/* Hover - sáng hơn + phóng to nhẹ */
-.map-btn:hover {
-  background: #00B46F;
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #00b46f7d;
+.card-footer a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #2549ff;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 900;
+    box-sizing: border-box;
+    transition: background 0.3s ease; 
 }
-/* Active - thu nhỏ + đậm hơn */
-.map-btn:active {
-  transform: scale(0.95);
-  background: #00B46F;
+.card-footer a:hover {
+  background: #1931A7;
+  color: #fff;
 }
-/* Ripple effect */
+.card-img, .card-text, .card-footer {
+    position: relative; 
+    z-index: 10;
+}
+
 .map-btn::after {
   content: "";
   position: absolute;
@@ -233,39 +301,48 @@ body.dark .slideshow-wrapper {background: linear-gradient(to bottom, #43b3a272, 
   transition: 0s;   
 }
 
-.card-footer a {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  background: #00B46F;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  box-sizing: border-box;
-  transition: background 0.3s ease; 
+/* Hover - sáng hơn + phóng to nhẹ */
+.map-btn:hover {
+  background: #3d19a8;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #2549ff;
 }
-.card-footer a:hover {
-  background: #00985E;
+/* Active - thu nhỏ + đậm hơn */
+.map-btn:active {
+  transform: scale(0.95);
+  background: #2549ff;
 }
 
+
+/* FOOTER =================================================================================================*/
 footer {
-  background: rgb(0, 0, 0);
-  color: #fff;
-  text-align: center;
-  padding: 10px 10px;
-  font-size: 14px;
-  backdrop-filter: blur(6px);
+    display: flex;
+    margin-top: 50px;
+    background: #0f0f0fc1;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0 30px rgba(255, 255, 255, 0.507);
+}
+footer #tonglienlac{
+    width: 400px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 footer .lienlac {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;    
   gap: 8px;
+  margin: 5px;
 }
-
+footer p{
+    text-align: left;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
 footer .lienlac a {
   display: flex;
   align-items: center;
@@ -273,336 +350,590 @@ footer .lienlac a {
   text-decoration: none; 
   color: #fff;           
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat";
+}
+footer .lienlac img{
+    border-radius: 100%;
 }
 
 footer .lienlac a:hover {
   color: #ffd700;        
 }
-.card {
-  opacity: 1;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+
+#logofooter{
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+#textlogof{
+    display: flex;
+    font-family: "Montserrat";
+    align-items: center;
+}
+#textlogof h3{
+    font-size: 30px;
+    margin: 0px;
+    margin-left: 10px;
+}
+#logofooter p{
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: "Montserrat";
+}
+#Thongtincoban{
+    display: block  ;
+}
+#in4{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+#in4 img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    /* Tạo dải mờ từ trái sang phải và từ trên xuống dưới */
+    -webkit-mask-image: 
+        linear-gradient(to right, transparent, black 5%, black 95%, transparent),
+        linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+    
+    /* Kết hợp 2 dải mờ trên */
+    -webkit-mask-composite: intersect; 
+
+    /* Thuộc tính chuẩn (lặp lại) */
+    mask-image: 
+        linear-gradient(to right, transparent, black 5%, black 95%, transparentt),
+        linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+    mask-composite: intersect;
+}
+#ThongtinF{
+    width: 500px;
+    margin-left: 100px;
+    font-family: "Montserrat";
+    font-weight: 900;
+    text-align: left;
+
+}
+#ThongtinF h2{
+    margin-bottom: 10px;
+}
+#ThongtinF a {
+  display: flex;
+  align-items: center;
+  gap: 6px;              
+  text-decoration: none; 
+  color: #fff;           
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-family: "Montserrat";
+}
+#ThongtinF a:hover {
+  color: #ffd700;        
 }
 
-.card.hidden {
-  opacity: 0;
-  transform: scale(0.95);
+#last{
+    background-color: #000000e1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 700;
+    padding: 20px;
+}
+
+/* VIDEO SECTION ============================================*/
+.video-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #1932A8 0%, #ffffff 80%);
+  overflow: hidden;
+}
+
+.video-player-container {
+position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 (9 / 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    background-color: #000; /* Hiển thị màu đen khi video đang tải */
+    /* Tạo dải mờ ở trên và dưới */
+    -webkit-mask-image: 
+        linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+    
+    /* Thuộc tính chuẩn (lặp lại) */
+    mask-image: 
+        linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+}
+.video-player-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.02);
+    width: 100%;
+    height: 100%;
+    border: none; /* Bỏ viền mặc định của iframe */
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
   pointer-events: none;
 }
-.card.highlight {
-  box-shadow: 0 0 20px 4px #ffffff; 
-  transition: box-shadow 0.6s ease;
-}
-#noResult {
-  display: none;
-  text-align: center;
-  margin: 20px auto;
-  padding: 15px 25px;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #fff;
-  background: rgba(138, 34, 44, 0.85); 
-  border-radius: 12px;
-  max-width: 400px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: fadeIn 0.4s ease-in-out;
+
+#ThongtinF .audio-player-container {
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Trình phát âm thanh */
+#ThongtinF .audio-player-container audio {
+  flex: 1;
+  margin-top: 5px;
+  min-width: 350px;
+  height: 40px; 
+  font-family: "Montserrat";
 }
 
-/* 🔼 Scroll To Top button */
-.scroll-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  background: var(--primary);
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
-  z-index: 1000;
-}
-.scroll-top:hover {
-  background: #00985E;
-  transform: scale(1.1);
-}
-.scroll-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-.scroll-top {
-  bottom: 70px; /* thay vì 20px */
+/* =================================================== */
+/* === (VIẾT LẠI) TOÀN BỘ CSS CHO ÂM NHẠC ĐỊA PHƯƠNG === */
+/* =================================================== */
+
+/* 0. HỦY BỎ NÚT BẤM CŨ (không dùng nữa) */
+#ThongtinF .song-title-trigger {
+    display: none;
 }
 
-/* ==== RESPONSIVE TOÀN BỘ WEBSITE ==== */
-
-/* 📱 Mobile (màn hình nhỏ hơn 600px) */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-  header {
-    padding: 12px 8px;
-  }
-
-  header .logo-h1 img {
-    width: 30px;
-  }
-
-  header .logo-h1 h1 {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  header .slogan {
-    font-size: 12px;
-    padding: 0 8px;
-  }
-
-  .search-bar {
-    flex-direction: column;
+/* 1. NÚT BẤM H2 VÀ MŨI TÊN */
+#ThongtinF .audio-toggle-btn {
+    display: flex;
+    align-items: center;
     gap: 10px;
-    padding: 0 10px;
-  }
-
-  .search-bar input, 
-  .search-bar select {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .card-container {
-    padding: 10px;
-    gap: 15px;
-  }
-
-  .card {
-    width: 100%;      
-    max-width: 100%;
-  }
-  .card-text h3 {
-    font-size: 16px;
-  }
-
-  .card-text p {
-    font-size: 12px;
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  footer .lienlac {
-    flex-direction: column;
-    gap: 4px;
-  }
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 10px;
+}
+#ThongtinF .audio-toggle-btn h2 {
+    margin-bottom: 0px;
 }
 
-/* 💻 Tablet (600px – 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-  header .logo-h1 h1 {
-    font-size: 18px;
-  }
-
-  header .slogan {
-    font-size: 13px;
-  }
-
-  .card {
-    width: 45%;   /* 2 card 1 hàng */
-  }
-
-  .card-text h3 {
-    font-size: 17px;
-  }
-
-  .card-text p {
-    font-size: 13px;
-  }
-
-  footer {
-    font-size: 13px;
-  }
+/* (CẬP NHẬT) Thay thế mũi tên '▼' bằng tam giác CSS */
+#ThongtinF .audio-toggle-btn .arrow-icon {
+    content: '';
+    width: 0; 
+    height: 0; 
+    
+    /* Vẽ hình tam giác */
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff; /* Đây là mũi tên trỏ xuống */
+  
+    
+    /* Hủy bỏ style text cũ */
+    font-size: 0;
+    line-height: 0;
+    
+    transform: translateY(12px);
+    transition: transform 0.2s ease;
 }
 
-/* 🖥️ Desktop (trên 900px) */
-@media (min-width: 901px) {
-  header .logo-h1 h1 {
-    font-size: 22px;
-  }
-
-  header .slogan {
-    font-size: 15px;
-  }
-
-  .card {
-    width: 300px;  /* cố định 3–4 card 1 hàng */
-  }
-
-  .card-text h3 {
-    font-size: 18px;
-  }
-
-  .card-text p {
-    font-size: 14px;
-  }
-
-  footer {
-    font-size: 14px;
-  }
-}
-/* 📏 Rất nhỏ (≤ 360px) – iPhone SE, Android mini */
-@media (max-width: 360px) {
-  header .logo-h1 h1 {
-    font-size: 14px;
-  }
-  header .slogan {
-    font-size: 11px;
-  }
-  .search-bar input, 
-  .search-bar select {
-    font-size: 12px;
-    padding: 8px;
-  }
-  .card {
-    width: 100%;
-  }
-  .card-text h3 {
-    font-size: 14px;
-  }
-  .card-text p {
-    font-size: 11px;
-  }
-  footer {
-    font-size: 11px;
-  }
+/* Khi bấm (JS thêm class 'active') */
+#ThongtinF .audio-toggle-btn.active .arrow-icon {
+    /* Xoay 180 độ để trỏ lên */
+    transform: translateY(12px) rotate(180deg); 
 }
 
-/* 📏 Nhỏ (361px – 480px) – điện thoại phổ thông */
-@media (min-width: 361px) and (max-width: 480px) {
-  header .logo-h1 h1 {
-    font-size: 15px;
-  }
-  header .slogan {
-    font-size: 12px;
-  }
-  .search-bar {
-    flex-direction: column;
-  }
-  .card {
-    width: 100%;
-  }
-  .card-text h3 {
-    font-size: 15px;
-  }
-  .card-text p {
-    font-size: 12px;
-  }
-  footer {
-    font-size: 12px;
-  }
+/* Hiệu ứng hover (đổi màu cả H2 và mũi tên) */
+#ThongtinF .audio-toggle-btn:hover h2 {
+    color: #ffd700;
+}
+#ThongtinF .audio-toggle-btn:hover .arrow-icon {
+    border-top-color: #ffd700; /* Đổi màu mũi tên */
 }
 
-/* 📏 Trung (481px – 600px) – điện thoại cỡ lớn */
-@media (min-width: 481px) and (max-width: 600px) {
-  header .logo-h1 h1 {
-    font-size: 16px;
-  }
-  header .slogan {
-    font-size: 13px;
-  }
-  .card {
-    width: 48%; /* 2 card 1 hàng nếu xoay ngang */
-  }
-  .card-text h3 {
-    font-size: 16px;
-  }
-  .card-text p {
-    font-size: 13px;
-  }
-}
-
-/* 📏 Lớn (601px – 768px) – tablet mini / điện thoại màn hình gập */
-@media (min-width: 601px) and (max-width: 768px) {
-  header .logo-h1 h1 {
-    font-size: 18px;
-  }
-  header .slogan {
-    font-size: 14px;
-  }
-  .card {
-    width: 45%; /* 2 card 1 hàng */
-  }
-}
-
-/* 📏 Tablet (769px – 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .card {
-    width: 30%; /* 3 card 1 hàng */
-  }
-  header .logo-h1 h1 {
-    font-size: 20px;
-  }
-  header .slogan {
-    font-size: 15px;
-  }
-}
-/* ==== Responsive cho slideshow ==== */
-
-/* 📱 Mobile nhỏ (≤ 600px) */
-@media (max-width: 600px) {
-  .slideshow {
-    width: 100%;
-    height: 200px;   /* giảm chiều cao */
+/* 2. KHUNG DANH SÁCH BÀI HÁT (bị ẩn) */
+#ThongtinF .song-list-container {
+    display: none; /* Ban đầu ẩn */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
-  }
-  .slides img {
-    object-fit: cover; /* luôn lấp đầy khung */
-  }
-  .dots span {
-    width: 8px;
-    height: 8px;
-    margin: 0 3px;
-  }
+    padding: 10px;
+    margin-bottom: 15px;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+/* Từng bài hát trong danh sách */
+#ThongtinF .song-item {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+#ThongtinF .song-item:hover {
+    color: #000000; 
+    background: #ffd700;
 }
 
-/* 💻 Tablet (601px – 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-  .slideshow {
-    width: 95%;
-    height: 300px;   /* vừa màn hình tablet */
-  }
-  .dots span {
-    width: 10px;
-    height: 10px;
-  }
+
+/* 3. KHUNG PLAYER CHÍNH (MÀU XANH) */
+#ThongtinF .player-wrapper {
+    display: none; /* Ban đầu ẩn, JS sẽ đổi thành 'flex' */
+    flex-direction: column; /* Xếp 2 hàng (header và control) */
+    
+    background: #0f0f0f89; /* Nền xanh đậm */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    
+    padding: 10px;
+    margin-top: 5px;
+    min-width: 350px;
+    max-width: 80%; /* Thêm cho responsive */
+    box-sizing: border-box;
 }
 
-/* 🖥️ Desktop (≥ 901px) */
-@media (min-width: 901px) {
-  .slideshow {
-    width: 90%;
-    height: 450px; /* giữ nguyên */
-  }
-}
-/* Responsive */
-@media (max-width: 600px) {
-  .slideshow { height: 200px; }
-  .dots span { width: 8px; height: 8px; }
+/* 3.1. Hàng 1 (Tên bài hát + Nút X) */
+#ThongtinF .player-header {
+    display: flex;
+    justify-content: space-between; /* Đẩy 2 item ra 2 bên */
+    align-items: center;
+    margin-bottom: 10px; /* Cách thanh control bên dưới */
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
-  .slideshow { height: 300px; }
+/* 3.2. Tên bài hát (Hàng 1, bên trái) */
+#ThongtinF .current-player-title {
+    color: #ffffff; /* Màu vàng */
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    text-align: left;
+    
+    /* Chống tràn chữ */
+    flex: 1; /* Cho phép co giãn */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px; /* Cách nút X 1 chút */
+}
+
+/* 3.3. Nút X (Hàng 1, bên phải) */
+#ThongtinF .audio-close-btn {
+    color: #fff; /* Màu trắng */
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* Reset/Hủy style cũ (nếu có) */
+    position: static;
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: inline;
+}
+#ThongtinF .audio-close-btn:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+    background: none; /* Đảm bảo không dính nền cũ */
+}
+
+
+
+
+/* ===================================================
+   RESPONSIVE - Dành cho nhiều thiết bị (PHIÊN BẢN HOÀN CHỈNH)
+   =================================================== */
+@media (max-width: 1280px){
+  #in4 {
+        flex-direction: column; /* Xếp dọc */
+        align-items: flex-start;
+        text-align: left;
+    }
+    #in4 img {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+    #in4 img {
+        margin-top: 20px;
+        align-self: center;
+        max-width: 650px;
+    }
+    .card::before {
+        display: none !important; 
+        animation: none !important; 
+        content: none;            
+        background: none; 
+        width: 0 !important;
+        height: 0 !important;
+    
+    }
+    .card::after {
+        display: none !important;
+        content: none !important;
+    }
+    
+    .card:hover::before {
+        display: none !important;
+        opacity: 0 !important;
+    }
+}
+@media (max-width: 1024px){
+  #in4 img {
+        margin-top: 20px;
+        align-self: center;
+        max-width: 400px;
+    }
+    #ThongtinF h2{
+      font-size: 15px;
+    }
+}
+/* === 1. CHO MÁY TÍNH BẢNG (768px trở xuống) === */
+/* Áp dụng cho màn hình từ 768px trở xuống */
+@media (max-width: 768px) {
+    
+    /* --- Header --- */
+    header {
+        padding: 10px;
+    }
+    #logo {
+        margin-right: 15px;
+        padding-left: 5px;
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+    #logo img {
+        width: 45px;
+    }
+    #namelogo {
+        font-size: 8px;
+        text-align: center;
+    }
+    #ntlg {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    #nametag {
+        flex: 1;
+    }
+    #nametag p {
+        font-size: 15px; /* Cỡ chữ Lớn */
+        margin-bottom: 4px;
+    }
+    #nametag h1 {
+        font-size: 20px; /* Cỡ chữ Lớn */
+        margin: 0;
+    }
+    #imglogo img{
+        width: 100px;
+    }
+
+    /* --- Thanh tìm kiếm --- */
+    .search-bar {
+        margin-left: 60px;
+        flex-direction: column; /* Xếp dọc */
+        width: 80%;
+    }
+    .search-bar input,
+    .custom-select {
+        width: 100%; /* Chiếm 100% chiều rộng */
+        min-width: 0;
+    }
+
+    /* --- Footer --- */
+    footer,
+    #in4 {
+        flex-direction: column; /* Xếp dọc */
+        align-items: flex-start;
+        text-align: left;
+    }
+    #in4 {
+        flex-direction: column-reverse; /* Đảo thứ tự ảnh và thông tin */
+    }
+    #tonglienlac,
+    #ThongtinF,
+    #in4 img {
+        width: 100%; /* Chiếm 100% chiều rộng */
+        max-width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+    #in4 img {
+        margin-top: 20px;
+        align-self: center;
+        max-width: 800px;
+    }
+}
+#ThongtinF .song-title-trigger {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    
+    /* Tạo hình dạng giống cái nút */
+    display: inline-block; /* Quan trọng để áp dụng padding */
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1); /* Hơi trong suốt */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    
+    transition: all 0.2s ease;
+}
+
+/* Hiệu ứng khi di chuột qua */
+#ThongtinF .song-title-trigger:hover {
+    color: #ffd700; /* Đổi màu vàng giống các link khác */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Style cho trình phát nhạc khi nó hiện ra.
+  Chúng ta dùng lại style cũ của bạn và đảm bảo nó 
+  hiển thị dạng 'block' để chiếm một hàng.
+*/
+#ThongtinF #localAudioPlayer {
+    flex: 1;
+    margin-top: 5px;
+    min-width: 350px;
+    height: 40px; 
+    font-family: "Montserrat";
+}
+
+
+/* === 2. TINH CHỈNH CHO ĐIỆN THOẠI VỪA (480px trở xuống) === */
+/* Áp dụng cho màn hình từ 480px trở xuống */
+@media (max-width: 480px) {
+    header {
+        padding: 8px;
+    }
+    #logo {
+        margin-right: 10px;
+    }
+    #nametag p {
+        font-size: 9px;  /* Cỡ chữ Vừa (~12px) */
+        font-weight: 600;
+    }
+    #nametag h1 {
+        font-size: 18px; /* Cỡ chữ Vừa (~16px) */
+    }
+    .search-bar {
+        margin-left: 30px;
+        flex-direction: column; /* Xếp dọc */
+        width: 80%;
+    }
+    .search-bar input,
+    .custom-select {
+        width: 100%; /* Chiếm 100% chiều rộng */
+        min-width: 0;
+    }
+    
+    /* --- Cards --- */
+    .card-container {
+        padding: 10px;
+    }
+    .card {
+        width: 95%; /* Các thẻ tự xếp thành 1 cột */
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Footer Audio --- */
+    #ThongtinF .audio-player-container {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+    #ThongtinF h2{
+      font-size: 18px;
+    }
+    #tonglienlac a{
+      font-size: 12px;
+    }
+}
+
+/* === 3. TINH CHỈNH CHO ĐIỆN THOẠI HẸP (430px trở xuống) === */
+/* Áp dụng cho màn hình 430px và TẤT CẢ các màn hình nhỏ hơn
+   (Giải quyết vấn đề "không ăn khớp")
+*/
+@media (max-width: 429px) {
+    header {
+        padding: 8px 6px; /* Giảm đệm ngang */
+    }
+    .search-bar {
+        margin-left: 20px;
+        flex-direction: column; /* Xếp dọc */
+        width: 80%;
+    }
+    .search-bar input,
+    .custom-select {
+        width: 100%; /* Chiếm 100% chiều rộng */
+        min-width: 0;
+    }
+    
+    /* Thu nhỏ logo */
+    #logo {
+        width: 50px;
+        margin-right: 8px; /* Giảm lề */
+    }
+    #anhlogodoan{
+        width: 50px;
+    }
+    #logo img {
+        width: 40px; /* Thu nhỏ logo */
+    }
+    #namelogo {
+        font-size: 8px; /* Chữ "XÃ ĐẦM HÀ" siêu nhỏ */
+    }
+
+    /* Thu nhỏ chữ tiêu đề */
+    #nametag p {
+        font-size:8px;  /* Cỡ chữ Rất nhỏ (~10.4px) */
+        font-weight: 600; /* Vẫn giữ đậm để dễ đọc */
+    }
+    #nametag h1 {
+        font-size: 1rem; /* Cỡ chữ Rất nhỏ (~14.4px) */
+    }
+    #ThongtinF h2{
+      font-size: 15px;
+    }
+    #ThongtinF a{
+      font-size: 12px;
+    }
+    #tonglienlac a{
+      font-size: 11px;
+    }
 }
