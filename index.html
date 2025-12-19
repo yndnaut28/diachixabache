@@ -1,63 +1,56 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bản đồ số xã Ba Chẽ</title>
-  <link rel="icon" type="image.png" href="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-Doan-Thanh-NIen-Cong-San-Ho-Chi-Minh-1.png">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản đồ số xã Ba Chẽ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image.png" href="/logo/logo.png">
 </head>
 <body>
     <header>
-        <div class="logo-h1">
-            <img src="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-Doan-Thanh-NIen-Cong-San-Ho-Chi-Minh-1.png" alt="logo" width="40px">
-            <h1 style="margin-left: 10px;">🗺️ BẢN ĐỒ SỐ – XÃ BA CHẼ</h1>
+        <div id = "logo">
+            <div id="anhlogodoan"><img src="/logo/logo.png" width="60px"></div>
+            <h3 id = "namelogo"> XÃ BA CHẼ</h1>
         </div>
-        <div class="slogan" style="font-size: 20px;">
-            <strong>TUỔI TRẺ XÃ BA CHẼ BẢN LĨNH SỐ, TRÁCH NHIỆM SỐ, HÀNH ĐỘNG VÌ CỘNG ĐỒNG SỐ</strong>
+        <div id = "ntlg">
+            <div id = "nametag">
+                <p>CÔNG TRÌNH THANH NIÊN SỐ XÃ BA CHẼ</p>
+                <h1>Bản đồ số xã Ba Chẽ</h1>
+            </div>
+            <div id ="imglogo">
+                <img src="/logo/Thanh niên.png" alt="doan">
+            </div>
         </div>
     </header>
-    <div class="slideshow-wrapper">
-        <div class="slideshow">
-            <div class="slides" id="slides">
-                <img src="/imgbackground/1.jpg" alt="Ảnh 1">
-                <img src="/imgbackground/2.jpg" alt="Ảnh 2">
-                <img src="/imgbackground/3.jpg" alt="Ảnh 3">
-                <img src="/imgbackground/4.jpg" alt="Ảnh 4">
-                <img src="/imgbackground/5.jpg" alt="Ảnh 5">
-                <img src="/imgbackground/6.jpg" alt="Ảnh 6">
-                <img src="/imgbackground/7.jpg" alt="Ảnh 7">
-                <img src="/imgbackground/8.jpg" alt="Ảnh 8">
-                <img src="/imgbackground/9.jpg" alt="Ảnh 9">
-                <img src="/imgbackground/10.jpg" alt="Ảnh 10">
-                <img src="/imgbackground/11.jpg" alt="Ảnh 11">
-                <img src="/imgbackground/12.jpg" alt="Ảnh 12">
-            </div>
-            <div class="dots" id="dots"></div>
-        </div>
 
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Tìm theo tên/địa chỉ...">
-            <select id="filterSelect">
-                <option value="all">Tất cả</option>
-                <option value="hanhchinh">Hành chính</option>
-                <option value="yte">Y tế</option>
-                <option value="truonghoc">Trường học</option>
-                <option value="mamnon">Trường mầm non</option>
-                <option value="congan">Công an</option>
-                <option value="dulich">Du lịch</option>
-                <option value="nganhang">Ngân hàng</option>
-                <option value="thethao">Thể thao</option>
-                <option value="nhamay">Nhà máy</option>
-            </select>
-            <button id="themeToggle" class="theme-btn">🌙</button>
+    <section class="video-section">
+        <div class="video-player-container">
+            <iframe 
+                src="https://www.youtube.com/embed/zdB68IofqLA?si=laq_Hu7X0VkaQRGq&autoplay=1&mute=1" 
+                title="Du lịch Ba Chẽ - Quảng Ninh" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
         </div>
-    </div>
-    <div id="noResult" style="display:none; text-align:center; margin:20px; font-weight:bold; color:#fff;">
-        ❌ Không tìm thấy địa điểm
+    </section>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Tìm theo tên/địa chỉ...">
+        <div class="custom-select" id="filterSelect">
+            <div class="selected">Tất cả</div>
+            <div class="options">
+                <div data-value="all">Tất cả</div>
+                <div data-value="hanhchinh">Hành chính</div>
+                <div data-value="yte">Y tế</div>
+                <div data-value="nhamay">Nhà máy</div>
+                <div data-value="dulich">Du lịch</div>
+                <div data-value="truonghoc">Trường học</div>
+                <div data-value="mamnon">Trường Mầm non</div>
+                <div data-value="thethao">Thể thao</div>
+            </div>
+        </div>    
     </div>
 
     <div class="card-container">
@@ -71,7 +64,7 @@
                 <p>Số 299, thôn 2, đường Hải Chi, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
-                <a class="map-btn" href="https://maps.app.goo.gl/j3eEdUk7oJhwHb2K6" target="_blank">Mở Google Maps</a>
+                <a class="map-btn" href="https://maps.app.goo.gl/MAVGZq9pNahbYe2k6" target="_blank">Mở Google Maps</a>
             </div>
         </div>
         <div class="card" data-type="hanhchinh">
@@ -88,7 +81,7 @@
         </div>
         <div class="card" data-type="hanhchinh">
             <div class="card-img">
-                <img src="/img/TTTC.png">
+                <img src="/img/Trung tâm chính trị.jpg">
             </div>
             <div class="card-text">
                 <h3>Trung tâm Chính trị xã Ba Chẽ</h3>
@@ -100,7 +93,7 @@
         </div>
         <div class="card" data-type="hanhchinh">
             <div class="card-img">
-                <img src="/img/UBND.jpg">
+                <img src="/img/ban chỉ huy quân sự.jpg">
             </div>
             <div class="card-text">
                 <h3>Ban Chỉ huy quân sự xã Ba Chẽ</h3>
@@ -139,47 +132,11 @@
                 <img src="/img/4coquan.jpg">
             </div>
             <div class="card-text">
-                <h3>Chi nhánh dịch vụ kỹ thuật nông nghiệp số 7</h3>
+                <h3>Ban quản lý rừng phòng hộ, đặc dụng miền Tây cơ sở Ba Chẽ</h3>
                 <p>Số 354, đường Hải Chi, thôn 1, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
                 <a class="map-btn" href="https://maps.app.goo.gl/5mJkwcKXf6GFAhAu5" target="_blank">Mở Google Maps</a>
-            </div>
-        </div>
-        <div class="card" data-type="hanhchinh">
-            <div class="card-img">
-                <img src="/img/4coquan.jpg">
-            </div>
-            <div class="card-text">
-                <h3>Bảo hiểm xã hội cơ sở Ba Chẽ</h3>
-                <p>Số 354, đường Hải Chi, thôn 1, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
-            </div>
-            <div class="card-footer">
-                <a class="map-btn" href="https://maps.app.goo.gl/5mJkwcKXf6GFAhAu5" target="_blank">Mở Google Maps</a>
-            </div>
-        </div>
-        <div class="card" data-type="hanhchinh">
-            <div class="card-img">
-                <img src="/img/4coquan.jpg">
-            </div>
-            <div class="card-text">
-                <h3>Chi cục kiểm lâm Quảng Ninh - Ban quản lý rừng phòng hộ, đặc dụng miền Tây cơ sở Ba Chẽ</h3>
-                <p>Số 354, đường Hải Chi, thôn 1, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
-            </div>
-            <div class="card-footer">
-                <a class="map-btn" href="https://maps.app.goo.gl/5mJkwcKXf6GFAhAu5" target="_blank">Mở Google Maps</a>
-            </div>
-        </div>
-        <div class="card" data-type="hanhchinh">
-            <div class="card-img">
-                <img src="/img/ps7.jpg">
-            </div>
-            <div class="card-text">
-                <h3>Phòng điều hành dự án 5 - Ban quản lý dự án</h3>
-                <p>Số 389, đường Hải Chi, thôn 1, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
-            </div>
-            <div class="card-footer">
-                <a class="map-btn" href="https://maps.app.goo.gl/9GQYVP3u8Pf4wXM19" target="_blank">Mở Google Maps</a>
             </div>
         </div>
         <div class="card" data-type="hanhchinh">
@@ -206,7 +163,18 @@
                 <a class="map-btn" href="https://maps.app.goo.gl/yLBNa9i6dP1j13Ac6" target="_blank">Mở Google Maps</a>
             </div>
         </div>
-
+        <div class="card" data-type="hanhchinh">
+            <div class="card-img">
+                <img src="https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/content/2025/02/28/4430-z6361354701077_bc9941d655bb2671113d2b1b6d521e9f-nongnghiep-174419-175809_762-183037.jpg">
+            </div>
+            <div class="card-text">
+                <h3>Công an xã Ba Chẽ</h3>
+                <p>Đường Hải Chi, thôn 1, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
+            </div>
+            <div class="card-footer">
+                <a class="map-btn" href="https://maps.app.goo.gl/q9jQjeRoBgsDYAV98" target="_blank">Mở Google Maps</a>
+            </div>
+        </div>
         <div class="card" data-type="thethao">
             <div class="card-img">
                 <img src="/img/ntd.jpg">
@@ -250,27 +218,13 @@
                 <img src="/img/nhcspt.png">
             </div>
             <div class="card-text">
-                <h3>Phòng giao dịch Ngân hàng Chính sách xã hội Ba Chẽ</h3>
+                <h3>Phòng giao dịch Ngân hàng Chính sách xã hội chi nhánh Ba Chẽ</h3>
                 <p>Thôn 2, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
                 <a class="map-btn" href="https://maps.app.goo.gl/sSka1xxg1FrLv9568" target="_blank">Mở Google Maps</a>
             </div>
         </div>
-
-        <div class="card" data-type="congan">
-            <div class="card-img">
-                <img src="https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/content/2025/02/28/4430-z6361354701077_bc9941d655bb2671113d2b1b6d521e9f-nongnghiep-174419-175809_762-183037.jpg">
-            </div>
-            <div class="card-text">
-                <h3>Công an xã Ba Chẽ</h3>
-                <p>Đường Hải Chi, thôn 1, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
-            </div>
-            <div class="card-footer">
-                <a class="map-btn" href="https://maps.app.goo.gl/q9jQjeRoBgsDYAV98" target="_blank">Mở Google Maps</a>
-            </div>
-        </div>
-
         <div class="card" data-type="yte">
             <div class="card-img">
                 <img src="https://trungtamytebache.vn/wp-content/uploads/2017/02/_d_improd_/hqc_f_improf_316x237.jpg">
@@ -300,7 +254,7 @@
                 <img src="/img/tytdd.jpg">
             </div>
             <div class="card-text">
-                <h3>Trạm y tế Đồn Đạc</h3>
+                <h3>Trạm y tế Ba Chẽ cơ sở Đồn Đạc</h3>
                 <p>Thôn Tân Tiến, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -312,7 +266,7 @@
                 <img src="/img/ytens.png">
             </div>
             <div class="card-text">
-                <h3>Trạm y tế Nam Sơn</h3>
+                <h3>Trạm y tế Ba Chẽ cơ sở Nam Sơn</h3>
                 <p>Thôn Nam Hả Ngoài, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -324,7 +278,7 @@
                 <img src="/img/ytts.png">
             </div>
             <div class="card-text">
-                <h3>Trạm y tế Thanh Sơn</h3>
+                <h3>Trạm y tế Ba Chẽ cơ sở Thanh Sơn</h3>
                 <p>Thôn Khe Lọng Ngoài, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -360,7 +314,7 @@
                 <img src="/img/Mnns.png">
             </div>
             <div class="card-text">
-                <h3>Trường Mầm Non Nam Sơn</h3>
+                <h3>Trường Mầm Non Ba Chẽ cơ sở Nam Sơn</h3>
                 <p>Thôn Nam Hả Ngoài, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -372,7 +326,7 @@
                 <img src="/img/Mnts.jpg">
             </div>
             <div class="card-text">
-                <h3>Trường Mầm Non Thanh Sơn</h3>
+                <h3>Trường Mầm Non Ba Chẽ cơ sở Thanh Sơn</h3>
                 <p>Thôn Khe Lọng Ngoài, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -397,7 +351,7 @@
                 <img src="/img/THDD.jpg">
             </div>
             <div class="card-text">
-                <h3>Trường tiểu học Đồn Đạc</h3>
+                <h3>Trường tiểu học Ba Chẽ cơ sở Đồn Đạc</h3>
                 <p>Thôn Làng Mô, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -433,7 +387,7 @@
                 <img src="/img/ththcsts.jpg">
             </div>
             <div class="card-text">
-                <h3>Trường TH&THCS Thanh Sơn</h3>
+                <h3>Trường TH&THCS Nam Sơn cơ sở Thanh Sơn</h3>
                 <p>	Thôn Khe Lọng ngoài, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -469,7 +423,7 @@
                 <img src="/img/THCSDD.jpg">
             </div>
             <div class="card-text">
-                <h3>Trường THCS Đồn Đạc</h3>
+                <h3>Trường THCS Ba Chẽ cơ sở Đồn Đạc</h3>
                 <p>Thôn Tân Tiến, xã Ba Chẽ, tỉnh Quảng Ninh.</p>
             </div>
             <div class="card-footer">
@@ -549,35 +503,131 @@
                 <a class="map-btn" href="https://maps.app.goo.gl/ZvJN4kZ8C5GEvuLf6" target="_blank">Mở Google Maps</a>
             </div>
         </div>
+
     </div>
 
+
     <footer>
-        <div class="lienlac">
-            <p style="margin-top: 7px;margin-bottom: 3px;">Kênh thông tin Đoàn thanh niên xã Ba Chẽ </p>
-            <a href="https://www.facebook.com/tuoitrebacheqn?locale=vi_VN" class="the">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/667px-2023_Facebook_icon.svg.png" width="20">
-                SỨC TRẺ BA CHẼ
-            </a>
+        <div>
+            <div id = "logofooter">
+                <div id = "textlogof">
+                    <img src="https://cdn.haitrieu.com/wp-content/uploads/2021/11/Logo-Doan-Thanh-NIen-Cong-San-Ho-Chi-Minh-1.png" width="30px">
+                    <h3> XÃ BA CHẼ</h1>
+                </div>
+                <p>Đoàn TNCS Hồ Chí Minh xã Ba Chẽ</p>
+                <div id = "Thongtincoban">
+                    <div class="lienlac">
+                        <img src="/logo/mail.png" width="20">
+                        <strong style="font-family: Montserrat;">Gmail:</strong>doanxabache@gmail.com
+                    </div>
+                    <div class="lienlac">
+                        <img src="/logo/call.png" width="20">
+                        <strong style="font-family: Montserrat;">Hotline:</strong>0969396922
+                    </div>
+                </div>
+            </div>
+
+            <div id = "tonglienlac">
+                <div class="lienlac">
+                    <a href="https://www.facebook.com/tuoitrebacheqn?locale=vi_VN" class="the" target="_blank">
+                        <img src="/logo/Sức trẻ ba chẽ.jpg" width="20">
+                        Sức trẻ Ba Chẽ
+                    </a>
+                </div>
+                <div class="lienlac">
+                    <a href="https://www.facebook.com/huyenbache" class="the" target="_blank">
+                        <img src="/logo/logo_bache.png" width="20">
+                        Xã Ba Chẽ
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="lienlac">
-            <p style="margin-top: 7px;margin-bottom: 3px;">Trang thông tin điện tử trên mạng xã hội Facebook chính thống của xã Ba Chẽ </p>
-            <a href="https://www.facebook.com/huyenbache" class="the">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/667px-2023_Facebook_icon.svg.png" width="20">
-                Xã Ba Chẽ
-            </a>
+        <div id = "in4">
+            <div id = "ThongtinF">
+                <h2>Giới thiệu xã Ba Chẽ</h2>
+                <a href="https://www.tinhthanhvn.com/province/quang-ninh/ba-che">
+                    Thông tin chính xã Ba Chẽ
+                </a>
+                <a href="https://baoquangninh.vn/xa-ba-che-khi-the-moi-khat-vong-lon-trong-hanh-trinh-doi-moi-3365008.html">
+                    Khí thế mới và khát vọng trong hành trình đổi mới
+                </a>
+                <a href=https://baoquangninh.vn/xa-ba-che-vung-buoc-tren-hanh-trinh-doi-moi-3368606.html"">
+                    Xã Ba Chẽ vững bước trên hành trình đổi mới  
+                </a>
+                <a href="https://baoquangninh.vn/lo-su-co-xa-nam-son-ba-che-3172050.html">
+                    Lò sứ cổ xã Nam Sơn
+                </a>
+                <div id="audioToggleBtn" class="audio-toggle-btn">
+                    <h2>Âm nhạc địa phương</h2>
+                    <span class="arrow-icon">▼</span>
+                </div>
+
+                <div class="audio-player-container">
+                    
+                    <div id="songListContainer" class="song-list-container">
+                        
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137611/V%E1%BB%81_Ba_Ch%E1%BA%BD_Qu%C3%AA_Em_-_Ns_Th%C3%A0nh_Long_-_Ca_s%C4%A9_Phan_Qu%E1%BB%B3nh_Anh_-_Lyrics_Video_xkj5cw.mp4" 
+                            data-title="Về Ba Chẽ quê em">
+                            🎵 Về Ba Chẽ quê em
+                        </div>
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137610/%C4%90i%E1%BB%81u_ch%C6%B0a_th%E1%BA%A5y_trong_v%C4%83n_t%E1%BB%B1_ng%C6%B0%E1%BB%9Di_Dao_-_S%C3%A1ng_t%C3%A1c_Ph%E1%BA%A1m_T%E1%BB%8Bnh_-_T%E1%BB%91p_nam_Ba_Ch%E1%BA%BD_g%E1%BB%91c_h5qva8.wav" 
+                            data-title="Điều chưa thấy trong văn tự người Dao">
+                            🎵 Điều chưa thấy trong văn tự người Dao
+                        </div>
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137605/1_N%C3%9AI_R%E1%BB%AANG_TH%E1%BA%AEM_S%E1%BA%AEC_MU%C3%94N_HOA_xdv0xu.wav" 
+                            data-title="Núi rừng thắm sắc muôn hoa">
+                            🎵 Núi rừng thắm sắc muôn hoa
+                        </div>
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137608/Ba_Ch%E1%BA%BD_m%C3%B9a_xu%C3%A2n_m%C3%B9a_hoa_-_L%C3%AA_%C4%90%C4%83ng_V%E1%BB%87_kldode.mp3" 
+                            data-title="Ba Chẽ mùa xuân hoa">
+                            🎵 Ba Chẽ mùa xuân hoa
+                        </div>
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137600/Hai_Chi_chung_toi_len_duong_-_Demo_egpq7c.mp3" 
+                            data-title="Hải Chi chúng tôi lên đường">
+                            🎵 Hải Chi chúng tôi lên đường
+                        </div>
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137600/Nh%E1%BB%9B_V%E1%BB%81_Ba_Ch%E1%BA%BD_-_Nh%C6%B0_H%C6%B0%C6%A1ng_ekro6m.mp3" 
+                            data-title="Nhớ về Ba Chẽ">
+                            🎵 Nhớ về Ba Chẽ
+                        </div>
+                        <div class="song-item" 
+                            data-src="https://res.cloudinary.com/dmvldnkcx/video/upload/v1766137599/B%C3%80I_CA_TR%C3%80_HOA_V%C3%80NG_RAP_V1_sguu09.mp3" 
+                            data-title="Bài ca trà hoa vàng">
+                            🎵 Bài ca trà hoa vàng
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div id="playerWrapper" class="player-wrapper">
+                        
+                        <div class="player-header">
+                            <p id="currentPlayerTitle" class="current-player-title"></p>
+                            <span id="audioCloseBtn" class="audio-close-btn">×</span>
+                        </div>
+                    
+                        <audio id="localAudioPlayer" controls>
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+
+                    </div>
+                </div>
+
+                
+            </div>
+            <img src="/logo/bando.png">   
         </div>
-        <div class="lienlac">
-            <p style="margin-top: 7px;margin-bottom: 3px;">Cổng thông tin điện tử xã Ba Chẽ </p>
-            <a href="bache.quangninh.gov.vn" class="the">
-                <img src="/img/none.jpg" width="20" style="border-radius: 10px;">
-                bache.quangninh.gov.vn
-            </a>
-        </div>
-        <div class="lienlac">
-            <p style="margin-top: 7px;margin-bottom: 3px;"><strong>Gmail</strong>: doanxabache@gmail.com </p>
-        </div>
-        <p style="margin-top: 10px; margin-bottom: 0px;">Thực hiện: <strong>Phạm Tuấn Duy</strong></p>
+        
     </footer>
+    <div id = "last">Bản quyền © 2025 | Đoàn Thanh niên Cộng sản Hồ Chí Minh xã Ba Chẽ <br><br> Người thực hiện: Phạm Tuấn Duy</div>
     <script src="script.js"></script>
 </body>
 </html>
